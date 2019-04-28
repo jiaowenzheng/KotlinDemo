@@ -1,4 +1,4 @@
-package com.example.kotlindemo.ui
+package com.example.kotlindemo.ui.login
 
 import android.service.autofill.Validators.or
 import android.util.Log
@@ -12,14 +12,15 @@ import com.example.kotlindemo.ui.base.BaseActivity
 /**
  * author:       JiaoWenZheng
  * created time: 2019/2/26 10:59
- * description:
+ * description:  登录页面
  */
-class SplashActivity : BaseActivity() {
+class LoginActivity : BaseActivity() {
 
     private lateinit var mCover: ImageView
     private lateinit var mLoginBtn : TextView
-
-    private val commentList = ArrayList<String>()
+    private lateinit var mPhoneLoginBtn: TextView
+    private lateinit var mGettingAnythingBtn: TextView
+    private lateinit var mCloseIv: ImageView
 
     override fun inflaterId(): Int {
         return R.layout.activity_splash
@@ -28,17 +29,14 @@ class SplashActivity : BaseActivity() {
     override fun initView() {
         mCover = findViewById(R.id.iv_cover)
         mLoginBtn = findViewById(R.id.tv_login_btn)
+        mPhoneLoginBtn = findViewById(R.id.tv_login_phone)
+        mGettingAnythingBtn = findViewById(R.id.tv_getting_anything)
+        mCloseIv = findViewById(R.id.iv_close)
 
+        mCloseIv.setOnClickListener(this)
         mLoginBtn.setOnClickListener(this)
-
-        for (i in 1..10) {
-            commentList.add(i.toString())
-        }
-
-        for (element in commentList){
-            Log.i("jiao"," element "+element)
-        }
-
+        mPhoneLoginBtn.setOnClickListener(this)
+        mGettingAnythingBtn.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -52,5 +50,7 @@ class SplashActivity : BaseActivity() {
     fun login(){
 
     }
+
+
 
 }

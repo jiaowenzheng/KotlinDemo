@@ -1,4 +1,4 @@
-package com.example.kotlindemo.ui.widget;
+package com.example.kotlindemo.widget;
 
 /**
  * Created by jiaowenzheng on 2017/9/20.
@@ -29,7 +29,6 @@ public class CustomTextView extends AppCompatTextView {
 
     private int strokeWidth;
     private int radius;
-
 
     public CustomTextView(Context context) {
         super(context);
