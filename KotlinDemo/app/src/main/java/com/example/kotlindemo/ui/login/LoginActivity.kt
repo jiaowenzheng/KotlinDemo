@@ -28,10 +28,10 @@ class LoginActivity : BaseActivity() {
 
     override fun initView() {
         mCover = findViewById(R.id.iv_cover)
+        mCloseIv = findViewById(R.id.iv_close)
         mLoginBtn = findViewById(R.id.tv_login_btn)
         mPhoneLoginBtn = findViewById(R.id.tv_login_phone)
         mGettingAnythingBtn = findViewById(R.id.tv_getting_anything)
-        mCloseIv = findViewById(R.id.iv_close)
 
         mCloseIv.setOnClickListener(this)
         mLoginBtn.setOnClickListener(this)
